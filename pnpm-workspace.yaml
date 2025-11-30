@@ -1,0 +1,6 @@
+# pnpm-workspace.yaml (루트에)
+onlyBuiltDependencies:
+  - '@prisma/engines'
+  - prisma
+  - sharp
+  - unrs-resolver

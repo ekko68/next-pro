@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1764423561619,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1764475567505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n {\n   \"name\": \"next-pro\",\n   \"version\": \"0.1.0\",\n   \"private\": true,\n+  \"packageManager\": \"pnpm@10.12.4\",\n   \"scripts\": {\n     \"dev\": \"next dev\",\n     \"build\": \"next build\",\n     \"start\": \"next start\",\n"
                 }
             ],
             "date": 1764423561619,
