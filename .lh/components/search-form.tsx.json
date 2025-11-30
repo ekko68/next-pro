@@ -1,0 +1,18 @@
+{
+    "sourceFile": "components/search-form.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1764509727671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1764509727671,
+            "name": "Commit-0",
+            "content": "import { Search } from \"lucide-react\"\n\nimport { Label } from \"@/components/ui/label\"\nimport { SidebarInput } from \"@/components/ui/sidebar\"\n\nexport function SearchForm({ ...props }: React.ComponentProps<\"form\">) {\n  return (\n    <form {...props}>\n      <div className=\"relative\">\n        <Label htmlFor=\"search\" className=\"sr-only\">\n          Search\n        </Label>\n        <SidebarInput\n          id=\"search\"\n          placeholder=\"Type to search...\"\n          className=\"h-8 pl-7\"\n        />\n        <Search className=\"pointer-events-none absolute top-1/2 left-2 size-4 -translate-y-1/2 opacity-50 select-none\" />\n      </div>\n    </form>\n  )\n}\n"
+        }
+    ]
+}
