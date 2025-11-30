@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/login/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1764484930589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1764484930589,
+            "name": "Commit-0",
+            "content": "import { LoginForm } from \"@/components/login-form\"\n\nexport default function LoginPage() {\n  return (\n    <div className=\"bg-muted flex min-h-svh flex-col items-center justify-center p-6 md:p-10\">\n      <div className=\"w-full max-w-sm md:max-w-4xl\">\n        <LoginForm />\n      </div>\n    </div>\n  )\n}\n"
+        }
+    ]
+}
