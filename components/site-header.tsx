@@ -9,6 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from './ui/breadcrumb';
+import { SearchForm } from './search-form';
 
 export function SiteHeader() {
   return (
@@ -28,7 +29,8 @@ export function SiteHeader() {
           </BreadcrumbList>
         </Breadcrumb>
         {/* <h1 className="text-base font-medium">Documents</h1> */}
-        <div className="ml-auto flex items-center gap-2">
+        <SearchForm className="w-full sm:ml-auto sm:w-auto" />
+        {/* <div className="ml-auto flex items-center gap-2">
           <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
             <a
               href="https://github.com/shadcn-ui/ui/tree/main/apps/v4/app/(examples)/dashboard"
@@ -39,7 +41,7 @@ export function SiteHeader() {
               GitHub
             </a>
           </Button>
-        </div>
+        </div> */}
       </div>
     </header>
   );
