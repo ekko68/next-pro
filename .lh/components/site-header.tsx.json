@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1764509334509,
@@ -44,6 +44,10 @@
                 {
                     "date": 1764510320579,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   BreadcrumbList,\n   BreadcrumbPage,\n   BreadcrumbSeparator,\n } from './ui/breadcrumb';\n+import { SearchForm } from './search-form';\n \n export function SiteHeader() {\n   return (\n     <header className=\"flex h-(--header-height) shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)\">\n@@ -28,9 +29,9 @@\n           </BreadcrumbList>\n         </Breadcrumb>\n         {/* <h1 className=\"text-base font-medium\">Documents</h1> */}\n         <SearchForm className=\"w-full sm:ml-auto sm:w-auto\" />\n-        <div className=\"ml-auto flex items-center gap-2\">\n+        {/* <div className=\"ml-auto flex items-center gap-2\">\n           <Button variant=\"ghost\" asChild size=\"sm\" className=\"hidden sm:flex\">\n             <a\n               href=\"https://github.com/shadcn-ui/ui/tree/main/apps/v4/app/(examples)/dashboard\"\n               rel=\"noopener noreferrer\"\n@@ -39,9 +40,9 @@\n             >\n               GitHub\n             </a>\n           </Button>\n-        </div>\n+        </div> */}\n       </div>\n     </header>\n   );\n }\n"
+                },
+                {
+                    "date": 1764510853755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Button } from '@/components/ui/button';\n+// import { Button } from '@/components/ui/button';\n import { Separator } from '@/components/ui/separator';\n import { SidebarTrigger } from '@/components/ui/sidebar';\n import {\n   Breadcrumb,\n"
                 }
             ],
             "date": 1764509334509,
