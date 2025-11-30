@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from '@/components/ui/field';
 import { Input } from '@/components/ui/input';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
   return (
@@ -74,7 +75,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
                 </Button>
               </Field>
               <FieldDescription className="text-center">
-                Don&apos;t have an account? <a href="#">Sign up</a>
+                Don&apos;t have an account? <Link href="http://localhost:3000/signup">Sign up</Link>
               </FieldDescription>
             </FieldGroup>
           </form>
