@@ -120,3 +120,146 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Radix UI Global Styles */
+@layer components {
+  /* Radix UI Animations */
+  @keyframes slideDownAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideLeftAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideUpAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideRightAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Radix UI Focus Styles */
+  [data-radix-focus-guard] {
+    @apply outline-none;
+  }
+
+  /* Radix UI Overlay */
+  [data-radix-popper-content-wrapper] {
+    z-index: 50;
+  }
+
+  /* Radix UI Scroll Area */
+  [data-radix-scroll-area-viewport] {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+  }
+
+  [data-radix-scroll-area-viewport]::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  [data-radix-scroll-area-viewport]::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  [data-radix-scroll-area-viewport]::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  [data-radix-scroll-area-viewport]::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Radix UI Portal */
+  [data-radix-portal] {
+    z-index: 50;
+  }
+
+  /* Smooth transitions for Radix UI components */
+  [data-state="open"],
+  [data-state="closed"] {
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  /* Radix UI Tooltip specific styles */
+  [data-radix-tooltip-content] {
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [data-radix-tooltip-content][data-side="top"] {
+    animation-name: slideDownAndFade;
+  }
+
+  [data-radix-tooltip-content][data-side="right"] {
+    animation-name: slideLeftAndFade;
+  }
+
+  [data-radix-tooltip-content][data-side="bottom"] {
+    animation-name: slideUpAndFade;
+  }
+
+  [data-radix-tooltip-content][data-side="left"] {
+    animation-name: slideRightAndFade;
+  }
+
+  /* Radix UI Dropdown Menu specific styles */
+  [data-radix-dropdown-menu-content] {
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Radix UI Select specific styles */
+  [data-radix-select-content] {
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Radix UI Dialog/Modal overlay */
+  [data-radix-dialog-overlay] {
+    background-color: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(4px);
+  }
+
+  /* Radix UI Checkbox and Radio focus states */
+  [data-radix-checkbox-root]:focus-visible,
+  [data-radix-radio-root]:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
