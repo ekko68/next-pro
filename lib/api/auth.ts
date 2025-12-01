@@ -145,13 +145,12 @@ export function useCurrentUser() {
     return useQuery({
         queryKey: ['auth', 'currentUser'],
         queryFn: authApi.getCurrentUser,
-        onSuccess: (data) => {
-            setUser(data)
-        },
-        onError: (error) => {
-            ErrorHandler.handle(error, false)
-        },
         retry: false,
         staleTime: Infinity,
+        // Note: onSuccess and onError removed in TanStack Query v5
+        // Use useEffect in component to handle side effects:
+        // const { data, error } = useCurrentUser()
+        // useEffect(() => { if (data) setUser(data) }, [data])
+        // useEffect(() => { if (error) ErrorHandler.handle(error, false) }, [error])
     })
 }

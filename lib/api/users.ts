@@ -84,9 +84,9 @@ export function useUsers(params?: UserListParams) {
     return useQuery({
         queryKey: ['users', params],
         queryFn: () => userApi.getUsers(params),
-        onError: (error) => {
-            ErrorHandler.handle(error)
-        },
+        // Note: onError removed in TanStack Query v5
+        // Handle errors in component: const { error } = useUsers()
+        // Or use global error boundary
     })
 }
 
@@ -98,9 +98,9 @@ export function useUser(id: number) {
         queryKey: ['users', id],
         queryFn: () => userApi.getUser(id),
         enabled: !!id,
-        onError: (error) => {
-            ErrorHandler.handle(error)
-        },
+        // Note: onError removed in TanStack Query v5
+        // Handle errors in component: const { error } = useUser(id)
+        // Or use global error boundary
     })
 }
 

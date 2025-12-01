@@ -194,9 +194,9 @@ export function useUserWithErrorHandling(id: number) {
         queryKey: ['users', id],
         queryFn: () => apiClient.get<User>(`/users/${id}`),
         retry: 2,
-        onError: (error: any) => {
-            console.error('Failed to fetch user:', error)
-            // 토스트 알림 등 추가 가능
-        },
+        // Note: In TanStack Query v5, onError is removed from useQuery
+        // Handle errors using the returned 'error' property in your component
+        // Example: const { data, error } = useUserWithErrorHandling(id)
+        //          if (error) { console.error('Failed to fetch user:', error) }
     })
 }
