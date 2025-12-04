@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import {
@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from './ui/breadcrumb';
 import { SearchForm } from './search-form';
+import { ThemeToggle } from './ui/theme-toggle';
 
 export function SiteHeader() {
   return (
@@ -29,7 +30,10 @@ export function SiteHeader() {
           </BreadcrumbList>
         </Breadcrumb>
         {/* <h1 className="text-base font-medium">Documents</h1> */}
-        <SearchForm className="w-full sm:ml-auto sm:w-auto" />
+        <div className="ml-auto flex w-full items-center gap-2 sm:w-auto">
+          <SearchForm className="flex-1 sm:w-[240px]" />
+          <ThemeToggle />
+        </div>
         {/* <div className="ml-auto flex items-center gap-2">
           <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
             <a
